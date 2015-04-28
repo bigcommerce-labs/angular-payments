@@ -1,44 +1,21 @@
-# Angular Payments
+# Angular Payments (tailored for BMP)
 
-An Angular Module that provides directives for *formatting* and *validating* forms related to payments. Also, it ships with a directive that makes it easy to integrate with Stripe's wonderful stripe.js.
+An Angular Module that provides directives for *formatting* and *validating* forms related to payments. 
 
 ### Credits
 
-This library wasn't just heavily inspired by Stripe's jQuery.payments, but is in fact mostly just a port of it to a more AngularJS-oriented style.
-
-Also, stripeForm is pretty much directly from gtramontina's Stripe Angular: https://github.com/gtramontina/stripe-angular
-
-All I did was port and combine these great libraries. Cheers!
-
-### Stripe Dependency
-
-Angular Payments includes a directive `stripe-form` which depends on the
-[stripe library](https://stripe.com/docs/stripe.js).
-
-The stripe library is not necessary to use the other directives.
-
-Be sure to also configure Stripe by setting your publishable key, something like:
-
-```html
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<script>
-  Stripe.setPublishableKey('YOUR_PUBLISHABLE_KEY');
-</script>
-```
+https://github.com/laurihy/angular-payments
 
 
 ## Usage
 
 To use Angular Payments, add angularPayments as a dependency to your AngularJS module or app.
 
-If you are using `stripe-form`, follow the instructions above on including
-stripe. 
-
 The module ships 3 directives, all of which should be added as attributes to elements. 
 
 * paymentsValidate
 * paymentsFormat
-* stripeFormat
+* stripeFormat (not included in angular-payments)
 
 ### paymentsValidate
 
@@ -172,22 +149,3 @@ See example-folder. You can run the example with
 	grunt connect
 	
 then connect to it at http://localhost:8000/example/index.html
-
-
-## Contributors
-
-Please Edit files in `src/`-folder and before submitting pull request, run grunt to compile and minify files in `lib`-folder.
-
-Despite of slow response times, all patches, bugfixes and features are more and welcome and much appreciated. Thanks to all who have and will contribute! :)
-
-## License 
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
